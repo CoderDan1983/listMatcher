@@ -1,0 +1,23 @@
+{
+  "name": "mocha_chai_git_package_etc_practice",
+  "version": "1.0.0",
+  "description": "\"I will be practicing using mocha, chai, git, and package.json, as well as node, in whatever this project is\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha index.test.js"
+  },
+  "keywords": [
+    "mocha",
+    "chai",
+    "git",
+    "package",
+    "node.js",
+    "command",
+    "prompt",
+    "command",
+    "line",
+    "shell"
+  ],
+  "author": "CoderDan1983",
+  "license": "ISC"
+}
