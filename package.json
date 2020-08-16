@@ -19,5 +19,10 @@
     "shell"
   ],
   "author": "CoderDan1983",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.1",
+    "sinon": "^9.0.3"
+  }
 }

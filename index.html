@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Practice for a job?
+		</title>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="node_modules/mocha/mocha.css">
+	</head>
+
+
+	<body>
+		<!-- 
+			A person will put in a paragraph.  They will hit the start button.
+			A script will run that will check: 
+			a) if the text area is empty/has the minimum number of words within a specified maximum and minimum.  While checking, it will be compiling a list of these words.
+			b) if the match was a success, a new list will be formed (randomly selecting words from the first list) that will total the word list length.
+				i)  the start game button will disappear, along with the wordLength min, max, and wordList length options.  Maybe they should be all together in a div.
+				ii) the end game button will appear.  should the end game button be pressed, this stuff should happen in reverse, so to speak.
+				iii) an input for words should appear
+				iv) a submit word button should appear
+				v) a list of submitted (and accepted words should be visible)
+				vi) a score should be displayed?  Time elipsed, too?
+				vii) or should it be that with enough matches, the word disappears?  and each word on the list will be tested to see if it has the word submitted in it?  When enough words have been found inside a word, it disappears, and we are trying to get rid of all the words from the list in the least moves?
+				viii) we should also check to see if the word is real. how will I do this?
+
+			
+
+		-->
+		<h1>Welcome to the Page!</h1>
+		<div id="mocha" ></div>
+		<div id="startupMenu">
+			<label for="languageSelect">Language: </label>
+			<select id="languageSelect">
+				<option value="ko">Korean</option>
+				<option value="es">Spanish</option>
+				<option value="en" selected>English</option>
+			</select><br>
+
+			<label for="wordLengthMin">The minimum size our words must be</label>
+			<select id="wordLengthMin">
+				<option value="1">1 letter</option>
+				<option value="2">2 letters</option>
+				<option value="3">3 letters</option>
+				<option value="4">4 letters</option>
+				<option value="5">5 letters</option>
+				<option value="6">6 letters</option>
+				<option value="7">7 letters</option>
+				<option value="8">8 letters</option>
+				<option value="9">9 letters</option>
+				<option value="10">10 letters</option>
+				<option value="-1">more than 10 letters</option>
+			</select><br>
+
+			<label for="wordLengthMax">The maximum size our words must be</label>
+			<select id="wordLengthMax">
+				<option value="1">1 letter</option>
+				<option value="2">2 letters</option>
+				<option value="3">3 letters</option>
+				<option value="4">4 letters</option>
+				<option value="5">5 letters</option>
+				<option value="6">6 letters</option>
+				<option value="7">7 letters</option>
+				<option value="8">8 letters</option>
+				<option value="9">9 letters</option>
+				<option value="10">10 letters</option>
+				<option value="-1">more than 10 letters</option>
+			</select><br>
+
+			<label for="wordListLength">How many words should our list be?</label>
+			<input type="text" id="wordListLength"><br>
+
+			<label for="wordInput">(The words from our list come from what you put here)</label>
+			<textarea id="wordInput" rows="4" cols="50"></textarea><br>
+
+			<button id="startButton">Start</button>
+		</div>
+
+		<div id="inGameSetup">
+			<div id="scoreDisplay">Score: </div><br>
+			<label for="wordTry">Try a Word</label>
+			<input id="wordTry">
+			<button id="checkWord">Check Word</button><br>
+			<button id="endButton">End Game</button>
+		</div>
+		<script src="node_modules/mocha/mocha.js"></script>
+		<script src="node_modules/chai/chai.js"></script>
+		<script src="node_modules/sinon/pkg/sinon.js"></script>
+		<script>
+			mocha.setup('bdd')
+		</script>
+
+		<script src="index.js"></script>
+		<script src="index.test.js"></script>
+		<script>
+			mocha.run();
+		</script>
+
+
+	</body>
+
+
+
+
+</html>
