@@ -1,6 +1,7 @@
 let startButton=document.getElementById("startButton");
 startButton.addEventListener("click", startGame);
 
+//this changed too!  (I hope ^_^)
 let wordArray=[];
 let lang=document.getElementById("languageSelect").value;
 let listLength=0;
